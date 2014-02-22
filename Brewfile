@@ -1,3 +1,6 @@
+#### USAGE:
+#### brew bundle ~/Brewfile
+
 update
 
 upgrade
