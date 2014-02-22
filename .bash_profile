@@ -3,8 +3,3 @@ for file in ~/.{bash_prompt,exports,aliases,functions,extra,sencha}; do
 done
 unset file
 
-# Set CLICOLOR if you want Ansi Colors in iTerm2
-export CLICOLOR=1
-
-# Set colors to match iTerm2 Terminal Colors
-export TERM=xterm-256color
