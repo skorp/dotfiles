@@ -10,5 +10,5 @@ See Thanks to section for the original repos
 
 ## Installation
 ```bash
-git clone http://https://github.com/skorp/dotfiles && cd dotfiles && ./init.sh
+git clone https://github.com/skorp/dotfiles && cd dotfiles && ./init.sh
 ```
