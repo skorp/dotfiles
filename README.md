@@ -6,7 +6,7 @@ See Thanks to section for the original repos
 
 ## Thanks to
 * [Mathias Bynens' dotfiles](https://github.com/mathiasbynens/dotfiles)
-* [addyosmani  dotfiles] (http://https://github.com/addyosmani/dotfiles/)
+* [addyosmani  dotfiles] (https://github.com/addyosmani/dotfiles/)
 
 ## Installation
 ```bash
