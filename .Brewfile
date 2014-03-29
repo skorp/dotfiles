@@ -1,5 +1,5 @@
 #### USAGE:
-#### brew bundle ~/Brewfile
+#### brew bundle ~/.Brewfile
 
 update
 
