@@ -14,7 +14,6 @@
 	whitespace = fix
 [core]
 	excludesfile = ~/.gitignore
-	attributesfile = ~/.gitattributes
 	whitespace = fix,space-before-tab,tab-in-indent,trailing-space
 [color "branch"]
 	current = yellow reverse
@@ -46,5 +45,5 @@
 
 # Any GitHub repo with my username should be checked out r/w by default
 # http://rentzsch.tumblr.com/post/564806957/public-but-hackable-git-submodules
-[url "git@github.com:addyosmani/"]
-  insteadOf = "git://github.com/addyosmani/"
+[url "git@github.com:skorp/"]
+  insteadOf = "git://github.com/skorp/"
