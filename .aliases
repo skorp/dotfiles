@@ -5,7 +5,7 @@ alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias p="cd ~/Projects"
 alias pw="cd ~/Projects/webs"
-alias vup="cd ~Projects/webs && vagrant up"
+alias vup="cd ~/Projects/webs && vagrant up"
 alias h="history"
 alias ll="ls -ali ${colorflag}"
 
