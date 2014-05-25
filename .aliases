@@ -47,3 +47,5 @@ alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && k
 
 #JAVASCRIPT CORE
 alias jsc='/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc'
+
+alias subl="open -a 'Sublime Text 2'"
