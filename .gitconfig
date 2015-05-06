@@ -15,6 +15,7 @@
 [core]
 	excludesfile = ~/.gitignore
 	whitespace = fix,space-before-tab,tab-in-indent,trailing-space
+	filemode = true
 [color "branch"]
 	current = yellow reverse
 	local = yellow
