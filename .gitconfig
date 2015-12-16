@@ -49,3 +49,12 @@
 # http://rentzsch.tumblr.com/post/564806957/public-but-hackable-git-submodules
 [url "git@github.com:skorp/"]
   insteadOf = "git://github.com/skorp/"
+
+  [difftool "sourcetree"]
+  	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  	path =
+  [mergetool "sourcetree"]
+  	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  	trustExitCode = true
+  [credential]
+  	helper = osxkeychain
