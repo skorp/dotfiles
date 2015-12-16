@@ -1,4 +1,4 @@
-for file in ~/.{bash_prompt,exports,aliases,functions,extra,sencha}; do
+for file in ~/.{bash_prompt,exports,aliases,functions,extra}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file"
 done
 unset file
