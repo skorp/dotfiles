@@ -45,7 +45,7 @@ parse_git_branch () {
 
 parse_git_commit_id() {
     output=$(git rev-parse --short HEAD 2>/dev/null)
-    [[ ! -z "$output" ]] && echo "[x$output]"
+    [[ ! -z "$output" ]] && echo "[$output]"
 }
 
-PS1="\[${BOLD}${MAGENTA}\]\u \[$GRAY\]at \[$ORANGE\]\h \[$GRAY\]in \[$GREEN\]\W\[$GRAY\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$PURPLE\]\$(parse_git_branch)\[$WHITE\]\$(parse_git_commit_id)   \n\$ \[$RESET\]"
+PS1="\[${BOLD}${MAGENTA}\]\u \[$GRAY\]at \[$ORANGE\]\h \[$GRAY\]in \[$GREEN\]\W\[$GRAY\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$PURPLE\]\$(parse_git_branch)\[$WHITE\] \$(parse_git_commit_id)   \n\$ \[$RESET\]"
