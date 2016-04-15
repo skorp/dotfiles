@@ -60,7 +60,7 @@ drm() { docker rm $(docker ps -a -q); }
 dri() { docker rmi $(docker images -q); }
 alias dpa="docker ps -a"
 alias dps="docker ps"
-alias dl="docker ps -l"
+alias dpl="docker ps -l"
 alias di="docker images"
 alias dip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
 dalias() { alias | grep 'docker' | sed "s/^\([^=]*\)=\(.*\)/\1 => \2/"| sed "s/['|\']//g" | sort; }
