@@ -53,10 +53,14 @@ alias jsc='/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/
 alias subl="open -a 'Sublime Text 2'"
 
 
-###docker aliases
-alias deli="docker rmi $(docker images -q)"
-alias delc="docker rm $(docker ps -a -q)"
-alias dls="docker ps -a"
-alias dla="docker ps"
-alias dll="docker ps -l"
-alias dli="docker images"
+###docker aliases //thanks to: github.com/tcnksm/docker-alias¬
+
+dstop() { docker stop $(docker ps -a -q); }
+drm() {docker rm $(docker ps -a -q); }
+dri() { docker rmi $(docker images -q); }
+alias dpa="docker ps -a"
+alias dps="docker ps"
+alias dl="docker ps -l"
+alias di="docker images"
+alias dip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
+dalias() { alias | grep 'docker' | sed "s/^\([^=]*\)=\(.*\)/\1 => \2/"| sed "s/['|\']//g" | sort; }
