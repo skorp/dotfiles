@@ -53,10 +53,10 @@ alias jsc='/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/
 alias subl="open -a 'Sublime Text 2'"
 
 
-###docker aliases //thanks to: github.com/tcnksm/docker-alias¬
+###docker aliases //thanks to: github.com/tcnksm/docker-alias
 
 dstop() { docker stop $(docker ps -a -q); }
-drm() {docker rm $(docker ps -a -q); }
+drm() { docker rm $(docker ps -a -q); }
 dri() { docker rmi $(docker images -q); }
 alias dpa="docker ps -a"
 alias dps="docker ps"
