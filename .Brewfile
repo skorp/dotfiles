@@ -11,5 +11,6 @@ install ant
 install imagemagick
 install tree
 install wget
+install vim
 
 cleanup
