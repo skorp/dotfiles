@@ -65,3 +65,6 @@ alias dpl="docker ps -l"
 alias di="docker images"
 alias dip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
 dalias() { alias | grep 'docker' | sed "s/^\([^=]*\)=\(.*\)/\1 => \2/"| sed "s/['|\']//g" | sort; }
+
+
+alias composer="php /usr/local/bin/composer.phar"
