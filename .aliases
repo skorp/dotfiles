@@ -64,6 +64,7 @@ alias dps="docker ps"
 alias dpl="docker ps -l"
 alias di="docker images"
 alias dip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
+alias gb="git branch | grep ^\*"
 dalias() { alias | grep 'docker' | sed "s/^\([^=]*\)=\(.*\)/\1 => \2/"| sed "s/['|\']//g" | sort; }
 
 
