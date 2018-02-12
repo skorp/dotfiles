@@ -1,5 +1,4 @@
-# add vim alias
-alias vim='/usr/local/Cellar/vim/7.4.1832/bin/vim'
+
 # Shortcuts
 alias d="cd ~/Dropbox"
 alias dl="cd ~/Downloads"
