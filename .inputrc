@@ -1,3 +1,7 @@
+set completion-ignore-case on
+set visible-stats on
+set show-all-if-ambiguous on
+
 "\eOA": history-search-backward
 "\e[A": history-search-backward
 "\eOB": history-search-forward
