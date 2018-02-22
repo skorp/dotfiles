@@ -9,6 +9,8 @@
 	ss = status -s
 	df = diff --color --color-words --abbrev
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+	send = update-index --no-assume-unchanged
+	notsend = update-index --assume-unchanged
 [color]
 	ui = always
 [apply]
