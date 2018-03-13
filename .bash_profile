@@ -1,4 +1,5 @@
-for file in ~/.{bash_prompt,exports,aliases,functions,extra}; do
+#bash_prompt removed for zsh
+for file in ~/.{exports,aliases,functions,extra}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file"
 done
 unset file
