@@ -13,7 +13,7 @@ ZSH_THEME="prose"
 ZSH_CUSTOM=~/.my_custom_zsh_path
 
 plugins=(
-  git docker zsh-autosuggestions
+  git docker zsh-autosuggestions z
 )
 source $ZSH/oh-my-zsh.sh
 
