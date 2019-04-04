@@ -1,0 +1,13 @@
+function runtest() {
+
+    if [[ $# -eq 0 ]] ; then
+        echo 'runtest() needs the docker container name/id to run the PHPunit Tests'
+        echo '\n\r'
+
+        echo 'List of running containers: '
+        docker container ls --format "table {{.ID}}\t{{.Ports}}\t{{.Names}}"
+        return 0
+    fi
+
+    docker exec $1 php ./vendor/bin/phpunit ${@:2}
+}
