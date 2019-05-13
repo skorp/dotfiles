@@ -11,6 +11,7 @@
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
 	send = update-index --no-assume-unchanged
 	notsend = update-index --assume-unchanged
+	dmb=!git branch --no-color --merged | egrep -v '(^\\*|master|dev)' | xargs git branch -d
 [color]
 	ui = always
 [apply]
