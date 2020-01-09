@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Upgrade build-in PHP to 7.3 version
+curl -s https://php-osx.liip.ch/install.sh | bash -s 7.3
+
