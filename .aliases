@@ -67,3 +67,7 @@ dalias() { alias | grep 'docker' | sed "s/^\([^=]*\)=\(.*\)/\1 => \2/"| sed "s/[
 
 
 alias composer="php /usr/local/bin/composer.phar"
+
+##RN
+alias rn-as = "adb shell input keyevent 82"
+alias rn-adb = "adb logcat *:S ReactNative:V ReactNativeJS:V"
