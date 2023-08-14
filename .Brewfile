@@ -12,5 +12,6 @@ install imagemagick
 install tree
 install wget
 install vim
+install anaconda
 
 cleanup

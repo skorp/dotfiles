@@ -38,3 +38,5 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:/usr/local/anaconda3/bin
+[[ -e "/usr/local/anaconda3/etc/profile.d/conda.sh" ]] && source "/usr/local/anaconda3/etc/profile.d/conda.sh"
+
