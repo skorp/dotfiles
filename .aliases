@@ -3,11 +3,7 @@
 alias d="cd ~/Dropbox"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
-alias p="cd ~/Projects"
-alias py="cd ~/Projects/Yumpu"
-alias pw="cd ~/Projects/webs"
-alias pj="cd ~/Projects/Javascript"
-alias pa="cd ~/Projects/anderthalb"
+alias p="cd ~/projects"
 alias ll="ls -ali ${colorflag}"
 
 # Detect which `ls` flavor is in use
@@ -55,7 +51,7 @@ alias subl="open -a 'Sublime Text 2'"
 ###docker aliases //thanks to: github.com/tcnksm/docker-alias
 
 dstop() { docker stop $(docker ps -a -q); }
-drm() { docker rm $(docker ps -a -q); }
+#drm() { docker rm $(docker ps -a -q); }
 dri() { docker rmi $(docker images -q); }
 alias dpa="docker ps -a"
 alias dps="docker ps"

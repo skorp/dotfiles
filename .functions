@@ -11,3 +11,48 @@ function runtest() {
 
     docker exec $1 php ./vendor/bin/phpunit ${@:2}
 }
+
+# rdns-local: Reverse→Forward nur über lokalen Resolver
+# Usage: rdns-local <IP>
+rdns-local() {
+  if [ -z "$1" ]; then
+    echo "Usage: rdns-local <IP>" >&2
+    return 2
+  fi
+  local ip="$1"
+  dig -x "$ip" +short | while read -r host; do
+    [ -z "$host" ] && continue
+    echo "PTR: $host"
+    dig A "$host" +short
+  done
+}
+
+# rdns-check: Reverse→Forward über mehrere Resolver (default, Google, Cloudflare, Quad9, OpenDNS)
+# Usage: rdns-check <IP>
+rdns-check() {
+  if [ -z "$1" ]; then
+    echo "Usage: rdns-check <IP>" >&2
+    return 2
+  fi
+  local ip="$1"
+  local resolvers=("default" "8.8.8.8" "1.1.1.1" "9.9.9.9" "208.67.222.222")
+
+  for r in "${resolvers[@]}"; do
+    if [ "$r" = "default" ]; then
+      echo "=== Resolver default ==="
+      dig -x "$ip" +short | while read -r host; do
+        [ -z "$host" ] && continue
+        echo "PTR: $host"
+        dig A "$host" +short
+      done
+    else
+      echo "=== Resolver @$r ==="
+      dig -x "$ip" +short @"$r" | while read -r host; do
+        [ -z "$host" ] && continue
+        echo "PTR: $host"
+        dig A "$host" +short @"$r"
+      done
+    fi
+    echo
+  done
+}
