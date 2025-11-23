@@ -4,6 +4,7 @@
 if [ -d "/opt/homebrew/bin" ]; then
     export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 fi
+export PATH="$HOME/.local/bin:$PATH"
 
 # Ensure Homebrew paths are available before anything else
 if command -v brew &>/dev/null; then
